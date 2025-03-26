@@ -17,7 +17,7 @@ pipeline {
     	// image info
     	DOCKERFILE_PATH="./test_${UNIQ_NUM}"
         DOCKERFILE="test.Dockerfile"
-        IMAGE_NAME="pxd-cicd"
+        IMAGE_NAME="fastapi-app"
         NEW_TAG="${currentBuild.number}"
   	  	
         // ecr
@@ -28,11 +28,11 @@ pipeline {
         ECR_REGION="ap-northeast-2"
         ECR_ACCOUNT_ID="*"
         ECR_PATH="*.dkr.ecr.ap-northeast-2.amazonaws.com"
-        ECR_REPO="pxd-cicd"
+        ECR_REPO="fastapi-app"
 
         // manifest info
-        SERVER_NAME="pxd_infer_server_${UNIQ_NUM}"
-        YAML_NAME="pxd_deploy_${UNIQ_NUM}"
+        SERVER_NAME="fastapi-app_server_${UNIQ_NUM}"
+        YAML_NAME="fastapi-app_deploy_${UNIQ_NUM}"
     }
   
     stages {
